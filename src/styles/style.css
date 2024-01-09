@@ -93,4 +93,35 @@ button{
        display: none;
     }
 }
-
+.grey-buttons button {
+  border-radius: 18px;
+  height:38px;
+  width:max-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+  box-shadow: rgba(2, 6, 12, 0.04);
+  color: rgba(2, 6, 12, 0.75);
+}
+.grey-buttons button img{
+  margin-left: 4px;
+}
+.grey-buttons{
+  display: flex;
+  gap: 8px;
+}
+.card img{
+  background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
+  
+}
+.bmsmxn {
+  display: grid;
+  align-content: end;
+  text-align: left;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  height: calc(81px);
+  background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
+}
