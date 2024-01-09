@@ -1,0 +1,96 @@
+.headCont {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
+  padding-right: 10%;
+  align-items: center;
+  padding-top: 1%;
+}
+.logo {
+  margin-right: 8%;
+}
+.head-space {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+  width: 45%;
+}
+
+.center {
+  align-items: center;
+}
+.drop-cont {
+  padding-left: 3%;
+}
+.header {
+  display: inline-block;
+  width: 100%;
+}
+.a-color {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+.nav-item {
+  width: 130px;
+}
+.acc {
+  width: 150px;
+}
+.font-header {
+  font-size: 12px;
+}
+sup {
+  font-size: 0.2em;
+  font-weight: 600;
+  color: #ffa700;
+}
+.weight {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+
+
+.main {
+  background-color: rgba(255, 255, 255, 0.244);
+  padding-left: 14%;
+  padding-right: 14%;
+  font-family: Basis_Grotesque_Pro;
+}
+.heading{
+    font-weight: 800;
+    font-size: 24px;
+}
+.arrow{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+button{
+    border-radius: 100px;
+}
+.btn-arrow{
+    background-color: #ffffffbe;
+}
+.section1{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.pictures-section1{
+    display:flex;
+    overflow: auto;
+    white-space: nowrap;
+    gap: 17px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+       display: none;
+    }
+}
+
