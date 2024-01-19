@@ -3,7 +3,7 @@ import filter from "../assets/images/filter.png"
 
 function Card2(){
     return(
-        <div className="main">
+        <div >
             <div className="section1">
                 <p className="heading">Restaurants with online food delivery in Coimbatore</p> 
             </div>

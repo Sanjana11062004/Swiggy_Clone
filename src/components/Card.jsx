@@ -7,7 +7,7 @@ import momos from "../assets/images/momos.png"
 
 function Card() {
   return (
-    <div className="main">
+    <div>
       <div className="section1">
         <p className="heading">Sanjana. what's on your mind?</p>
         <div className="arrow">
