@@ -5,6 +5,8 @@
   padding-right: 10%;
   align-items: center;
   padding-top: 1%;
+  justify-content: space-between;
+  position: fixed;
 }
 .logo {
   margin-right: 8%;
@@ -17,7 +19,9 @@
   display: flex;
   width: 45%;
 }
-
+.width-change{
+  width: 100px;
+}
 .center {
   align-items: center;
 }
@@ -264,6 +268,9 @@ nav{
   margin: 0 auto;
   font-size: 16px;
 }
+.nav-items-left-a{
+  padding-right: 6%;
+}
 .nav-items-2{
   padding-top: 10px;
 }
@@ -273,13 +280,15 @@ nav{
 .nav-items-right-container{
   display: flex;
   gap: 0.5rem;
+  font-weight: 600;
 }
 .image{
   height: 18px;
-  padding-top: 5px;
+  
 }
 .nav-bar{
   display: flex;
+  margin-bottom: 25px;
 }
 
 

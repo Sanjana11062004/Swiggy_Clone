@@ -12,16 +12,16 @@ function Header() {
     <div>
         <nav className="nav-bar ">
             <ul className='nav-items-left'>
-                <a className='nav-items-left-a' href=''><img className='logo' src='https://th.bing.com/th/id/OIP.zeYbojw3hyzUz8DIzfVnagHaEK?rs=1&pid=ImgDetMain'></img></a>
+                <a className='nav-items-left-a' href=''><img className='logo' src={logo} width={50} height={70}></img></a>
                 <li className='nav-items'><a className='nav-items-left-a' href=''>Orders</a></li>
                 <li className='nav-items-1'><a href=''>Coimabtore,Tamilnadu,India</a></li>
-                <li className='nav-items-1'><a href=''><img className='arrow-down' src="/images/down-arrow.png"></img></a></li>
+                <li className='nav-items-1'><a href=''><img className='arrow-down' src={dropdown}></img></a></li>
             </ul>
             <ul className='nav-items-right '>
                 <li className='nav-items-2'>
                     <a  className='nav-items-left-a a-color' href=''>
                         <div className='nav-items-right-container'>
-                            <span><img className='image' src="/images/search.png"></img></span>
+                            <span><img className='image' src={search}></img></span>
                             <span>Search</span>
                         </div>
                     </a>
@@ -29,15 +29,15 @@ function Header() {
                 <li className='nav-items-2'>
                     <a className='nav-items-left-a a-color' href=''>
                         <div className='nav-items-right-container'>
-                            <span><img className='image' src="/images/discount.png"></img></span>
-                            <span>Offers</span>
+                            <span><img className='image' src={discount} ></img></span>
+                            <span>Offers<sup>NEW</sup></span>
                         </div>
                     </a>
                 </li>
                 <li className='nav-items-2'>
                     <a className='nav-items-left-a a-color' href=''>
                         <div className='nav-items-right-container'>
-                            <span><img className='image' src="/images/help.png"></img></span>
+                            <span><img className='image'  src={help}></img></span>
                             <span>Help</span>
                         </div>
                     </a>
@@ -45,7 +45,7 @@ function Header() {
                 <li className='nav-items-2'>
                     <a className='nav-items-left-a a-color' href=''>
                         <div className='nav-items-right-container'>
-                            <span><img className='image' src="/images/user.png"></img></span>
+                            <span><img className='image' src={user}></img></span>
                             <span>Profile</span>
                         </div>
                     </a>
@@ -53,7 +53,7 @@ function Header() {
                 <li className='nav-items-2'>
                     <a className='nav-items-left-a a-color' href=''>
                         <div className='nav-items-right-container'>
-                            <span><img className='image' src="/images/cart.png"></img></span>
+                            <span><img className='image' src={cart}></img></span>
                             <span>Cart</span>
                         </div>
                     </a>
