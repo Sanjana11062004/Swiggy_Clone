@@ -9,72 +9,57 @@ import cart from "../assets/images/cart.png"
 
 function Header() {
   return (
-    <div className="headCont">
-      <div className="nav center flex ">
-        <img src={logo} className="logo" width={56} alt="logo"></img>
-        <div>
-          <li className="nav-item address">
-            <a className="active a-color"  href="#">
-              Annamalai Nagar
-            </a>
-          </li>
-        </div>
-        <div>
-        <li className="nav-item drop-cont header acc">
-            <a className="font-header"  aria-current="page"  >
-            M24P+FG8 Annamalai N...
-            </a>
-        </li>
-        </div>
-        <div>
-        <img
-          src={dropdown}
-          className="dropdown"
-          width={20}
-          height={20}
-          alt="dropdown"
-        ></img></div>
-      </div>
-      <div>
-        <ul className="nav justify-content-center weight">
-          <li className="nav-item">
-            <a className="nav-link active head-space" aria-current="page" href="#">
-                <span><img src={search} alt="search" width={16} ></img></span>
-                &nbsp;&nbsp;<span>Search</span>
-                
-            </a>
-            
-          </li>
-          <li className="nav-item">
-            <a className="nav-link active head-space" aria-current="page" href="#">
-                <span><img src={discount} alt="search" width={18} ></img></span>
-                &nbsp;&nbsp;<span>Offers<sup>NEW</sup></span>
-                
-            </a>
-          </li>
-          <li className="nav-item">
-          <a className="nav-link active head-space" aria-current="page" href="#">
-                <span><img src={help} alt="search" width={18} ></img></span>
-                &nbsp;&nbsp;<span>Help</span>
-                
-            </a>
-          </li>
-          <li className="nav-item acc">
-          <a className="nav-link active head-space" aria-current="page" href="#">
-                <span><img src={user} alt="search" width={22} ></img></span>
-                &nbsp;&nbsp;<span>Sanjana...</span>
-                
-            </a>
-          </li>
-          <li className="nav-item" >
-          <a className="nav-link active head-space" aria-current="page" href="#">
-                <span><img src={cart} alt="search" width={22} ></img></span>
-                &nbsp;&nbsp;<span>Cart</span>
-                
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div>
+        <nav className="nav-bar ">
+            <ul className='nav-items-left'>
+                <a className='nav-items-left-a' href=''><img className='logo' src='https://th.bing.com/th/id/OIP.zeYbojw3hyzUz8DIzfVnagHaEK?rs=1&pid=ImgDetMain'></img></a>
+                <li className='nav-items'><a className='nav-items-left-a' href=''>Orders</a></li>
+                <li className='nav-items-1'><a href=''>Coimabtore,Tamilnadu,India</a></li>
+                <li className='nav-items-1'><a href=''><img className='arrow-down' src="/images/down-arrow.png"></img></a></li>
+            </ul>
+            <ul className='nav-items-right '>
+                <li className='nav-items-2'>
+                    <a  className='nav-items-left-a a-color' href=''>
+                        <div className='nav-items-right-container'>
+                            <span><img className='image' src="/images/search.png"></img></span>
+                            <span>Search</span>
+                        </div>
+                    </a>
+                </li>
+                <li className='nav-items-2'>
+                    <a className='nav-items-left-a a-color' href=''>
+                        <div className='nav-items-right-container'>
+                            <span><img className='image' src="/images/discount.png"></img></span>
+                            <span>Offers</span>
+                        </div>
+                    </a>
+                </li>
+                <li className='nav-items-2'>
+                    <a className='nav-items-left-a a-color' href=''>
+                        <div className='nav-items-right-container'>
+                            <span><img className='image' src="/images/help.png"></img></span>
+                            <span>Help</span>
+                        </div>
+                    </a>
+                </li>
+                <li className='nav-items-2'>
+                    <a className='nav-items-left-a a-color' href=''>
+                        <div className='nav-items-right-container'>
+                            <span><img className='image' src="/images/user.png"></img></span>
+                            <span>Profile</span>
+                        </div>
+                    </a>
+                </li>
+                <li className='nav-items-2'>
+                    <a className='nav-items-left-a a-color' href=''>
+                        <div className='nav-items-right-container'>
+                            <span><img className='image' src="/images/cart.png"></img></span>
+                            <span>Cart</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>  
+        </nav>
     </div>
   );
 }
