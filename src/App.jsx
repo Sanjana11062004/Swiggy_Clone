@@ -106,6 +106,96 @@ function App() {
               area="Saravapatti"
               
             ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+              
+            ></Items>
 
         </div>
         
