@@ -140,6 +140,8 @@ button {
   margin-top: 12px;
   margin-bottom: 18px;
   position: relative;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .offers-home img {
@@ -149,7 +151,7 @@ button {
   gap: 14px;
 }
 .content-gap {
-  gap: 32px;
+  gap: 42px;
 }
 
 .products_container {
@@ -361,8 +363,8 @@ div.container-1 img {
 .body-image-container{
   display: flex;
   /*gap: 1rem;*/
-  width:255px ;
-  height: 280px;
+  width:240px ;
+  height: 290px;
   padding-top: 24px; 
   background-color: rgb(255, 255, 255);
   transition: 0.3s ease;
@@ -442,4 +444,233 @@ div.container-1 img {
   max-width: 1080px;
   margin: 0 auto;
   font-size: 22px;
+}
+
+
+
+
+
+
+.hr{
+  margin-top: 8%;
+  
+}
+.main2{
+  padding-right: 7%;
+  padding-left: 7%;
+}
+.main2-content{
+  
+  padding-right: 7.6%;
+  padding-left: 7.6%;
+}
+.heading-main2{
+  font-weight: 700;
+  font-size: 24px;
+} 
+.margin-next-head-main2{
+  margin-top: 5%;
+  margin-bottom: 1.6%;
+}
+
+/*Content*/
+.resturant-container-main{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.resturant-container-main-items{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  padding-top: 10px;
+}
+.resturant-container-main-items-ancchor{
+  color: black;
+  text-decoration: none;  
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 14px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+  padding: 16px 46px;
+  box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+  font-size: 16px;
+}
+.resturant-container-main-items-ancchor2{
+  padding: 16px 210px;
+}
+.content-main{
+  margin-top: 1%;
+}
+.cont-flex{
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.gapbtw{
+  margin-top: 8rem;
+}
+
+/*Footer*/
+.footer-top{
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content: center;
+  background-color: rgb(240, 240, 245);
+  
+  
+}
+.footer-text{
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 30px;
+  padding-right: 80px;
+  }
+.footer-img{
+  margin-top: 10px;
+  height: 60px;
+  max-width: 508px;
+  padding-right: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color:black;
+  
+
+  padding: 0 20%;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-part1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button-text{
+  color:  black;
+  
+  
+}
+.arrow-down-1{
+  height: 18px;
+  margin-top: 4px;
+}
+.resturant-container-main-items-ancchor-1{
+  color: black;
+  font-weight: 550;
+  text-decoration: none;  
+  justify-content: center;
+  display: flex;
+
+  border-radius: 18px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+  padding: 13px 25px;
+  width: 230px;
+  
+  box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+  font-size: 13.9px;
+}
+ .btn-btn{
+  gap: 1px;
+  border-radius: 18px;
+  border:none;
+}
+.btn-btn-ss{
+  color:  black;
+  font-size: 14.5px;
+}
+#button-id{
+  color: black;
+  font-weight: 550;
+  text-decoration: none;  
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.1rem;
+  border-radius: 18px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+  
+  width: 270px;
+  height: 49px;
+  
+  box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+  font-size: 14.3px;
+
+}
+
+#myDIV {
+ 
+  text-align: center;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top:1px;
+  margin-left: -945px;
+  display: none;
+}
+.resturant-container-mains{
+  display: flex;
+  
+  margin: 0 auto;
+  padding: 20px;
+  gap: 3rem;
+  margin-left: 205px;
+}
+.resturant-container-main-items-ancchors{
+  text-decoration: none;
+  color: black;
+  text-decoration: none;  
+  border-radius: 1px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+
+  padding: 15px 169px 15px 169px;
+  width: 230px;
+  box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+  font-size: 14.5px;
 }
