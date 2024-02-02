@@ -7,7 +7,7 @@ import Hr from "./components/Hr";
 import Footer from "./components/Footer";
 import ContentBig from "./components/ContentBig";
 import Content from "./components/Content" ;
-import Dishes from "./components/Dishes";
+import Dish from "./components/Dish";
 import dosa from "../src/assets/images/dosa.png";
 import offer1 from "./assets/images/offer1.png";
 import offer2 from "./assets/images/offer2.png";
@@ -248,7 +248,8 @@ function App() {
         </div>
         <div className="gapbtw"></div>
         <Footer></Footer>
-        <Dishes></Dishes>
+        <Dish></Dish>
+        
      
     </div>
   );

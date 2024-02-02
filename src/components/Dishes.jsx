@@ -30,14 +30,12 @@ function Dishes() {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="">
                 <img  className="dishes-image" src={dosa} alt="dish-image" width={120} height={100}></img>
             </div>
           </div>
           <div></div>
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          
         </div>
       </div>
     </div>
