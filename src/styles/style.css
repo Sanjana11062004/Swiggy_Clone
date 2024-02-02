@@ -727,8 +727,13 @@ div.container-1 img {
 }*/
 
 .dropdown {
+  width: 100%;
   float: left;
-  overflow: hidden;
+  
+  /*overflow: hidden;*/
+}
+.dishes-container{
+  width: 100%;
 }
 
 .dropdown .dropbtn {
@@ -743,24 +748,24 @@ div.container-1 img {
   margin: 0;
 }
 
+
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
   background-color: red;
 }
 
 .dropdown-content {
-  display: none;
+  /*display: none;*/
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 300;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  width:600px;
+  width:100%;
 }
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 12px 0px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -772,8 +777,12 @@ div.container-1 img {
 .flexx{
 display:flex;
 justify-content:space-between;
-background-color:red;
-width:600px;
+width:auto;
+background-color: red;
+padding-left: 0px;
+}
+.color{
+  background-color: white;
 }
 .show {
   display: block;
@@ -781,4 +790,28 @@ width:600px;
 .col{
 display:flex;
 flex-direction:column;
+
+}
+.dishes-image{
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+.dishes-items p{
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1px;
+  margin-bottom: 0px;
+
+}
+.dishes-items-price{
+  font-size: 13px;
+  font-weight: 400;
+}
+.dishes-items-price p{
+  margin-bottom: 12px;
+}
+.dishes-desc p{
+  font-size: 12px;
+  color: rgba(40,44,63,.45);
 }
