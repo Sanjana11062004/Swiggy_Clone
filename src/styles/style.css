@@ -742,22 +742,27 @@ div.container-1 img {
   border: none;
   outline: none;
   color: white;
+  background-color: red;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
 }
-
-
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: red;
+.dropbtn {
+  font-size: 16px;
+  font-weight: 700px;
+  background-color: #fff;
+  border: none;
 }
+
+
+
 
 .dropdown-content {
   /*display: none;*/
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  position: relative;
+ 
+  
   z-index: 1;
   width:100%;
 }
@@ -771,14 +776,12 @@ div.container-1 img {
   text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+
 .flexx{
 display:flex;
 justify-content:space-between;
 width:auto;
-background-color: red;
+background-color: fff;
 padding-left: 0px;
 }
 .color{
@@ -817,3 +820,35 @@ flex-direction:column;
 }
 
 /*Dish*/
+.dish-main{
+  padding: 0% 24%;
+  margin-top: 50px;
+  margin-bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+}
+.dish-main-item{
+  height: max-content;
+  position: relative;
+}
+.dishes-btn {
+  position: absolute;
+  top: 73%;
+  left: 91.2%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #fff;
+  color:#60b246;
+  font-size: 14px;
+  font-weight: 500;
+  width: 13%;
+  height: 28%;
+  
+  border: 1px solid #d4d5d9;
+  box-shadow: #686b78;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import dropdown from "../assets/images/dropdown.png";
+import Hr from "./Hr";
 import dosa from "../assets/images/dosa.png";
 import veg from "../assets/images/veg.png"
 
@@ -7,12 +7,7 @@ function Dishes() {
   return (
     <div className="dishes-container">
       <div className="dropdown">
-        <div className="flexx">
-          <button className="dropbtn" onclick="myFunction()">
-            Dropdown
-          </button>
-          <img src={dropdown} alt="dropdown" width={18} height={18}></img>
-        </div>
+        
         <div className="dropdown-content" id="myDropdown">
           <div className="flexx color">
             <div className="col">
@@ -32,9 +27,14 @@ function Dishes() {
             </div>
             <div className="">
                 <img  className="dishes-image" src={dosa} alt="dish-image" width={120} height={100}></img>
+                <button className="dishes-btn">ADD</button>
             </div>
+            
           </div>
-          <div></div>
+          <div>
+          <hr></hr>
+          </div>
+          
           
         </div>
       </div>
