@@ -16,8 +16,8 @@ function Dish() {
           </button>
           <img src={dropdownblack} alt="dropdown" width={18} height={18}></img>
         </div>
-        <div className="dish-main-item">
-          <Dishes></Dishes>
+        <div className="dish-main-item" >
+          <Dishes onClick={window.open(`src\Screens\Restaurant.js`)}></Dishes>
           <Dishes></Dishes>
         </div>
         
