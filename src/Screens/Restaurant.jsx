@@ -1,7 +1,7 @@
 import React from "react";
 function Restaurant(){
-    return(<>
+    return(
         <Text>Hello</Text>
-    </>);
+    );
 }
 export default Restaurant;

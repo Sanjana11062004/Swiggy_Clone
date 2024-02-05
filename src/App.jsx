@@ -13,21 +13,22 @@ import Offers from "./components/Offers";
 import React, { useState } from "react";
 import offer1 from "./assets/images/offer1.png";
 import offer2 from "./assets/images/offer2.png";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Restaurant from "./Screens/Restaurant";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-  const Stack=createStackNavigator();
+  
   return(
    
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Tasks" component={Restaurant}/>
-    
-        </Stack.Navigator>
-    </NavigationContainer> 
+    <BrowserRouter>
+    <Routes>
+   
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<Restaurant />} />
+       
+      
+    </Routes>
+  </BrowserRouter>
     
   );
 }
