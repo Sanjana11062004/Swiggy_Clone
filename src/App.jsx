@@ -17,19 +17,231 @@ import Restaurant from "./Screens/Restaurant";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  const handleClick = () => {
+    // navigate to /about
+    const navigate = useNavigate();
+    navigator('/')
+  };
+  const [offers, setOffers] = useState([offer1,offer2]);
+    return (
+      <div>
+        <Header></Header>
+        <div className="main">
+          <p className="heading margin-next-head">Best offers for you</p>
+          <div className=" app-div offers-app">
+            {offers.map((i) => (
+              <Offers offers={i}></Offers>
+            ))}
+          </div>
   
-  return(
-   
-    <BrowserRouter>
-    <Routes>
-   
-        <Route index element={<Home />} />
-        <Route path="blogs" element={<Restaurant />} />
-       
-      
-    </Routes>
-  </BrowserRouter>
-    
+          <Card></Card>
+          <Card2></Card2>
+  
+          <div className="app-div content-gap">
+            <button onClick={handleClick}>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            </button>
+            
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+  
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+            <Items
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+          </div>
+        </div>
+        <div className="main2">
+          <Hr></Hr>
+        </div>
+        <div className="main2-content">
+          <p className="heading-main2 margin-next-head-main2">
+            Best Places to Eat Across Cities
+          </p>
+          <div className="cont-flex">
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+          </div>
+        </div>
+        <div className="main2-content">
+          <p className="heading-main2 margin-next-head-main2">
+            Best Places to Eat Across Cities
+          </p>
+          <div className="cont-flex">
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+            <Content></Content>
+          </div>
+        </div>
+        <div className="main2-content">
+          <p className="heading-main2 margin-next-head-main2">
+            Best Places to Eat Across Cities
+          </p>
+          <div className="cont-flex">
+            <ContentBig></ContentBig>
+            <ContentBig></ContentBig>
+          </div>
+        </div>
+        <div className="gapbtw"></div>
+        <Footer></Footer>
+        <Dish></Dish>
+      </div> 
   );
 }
 
