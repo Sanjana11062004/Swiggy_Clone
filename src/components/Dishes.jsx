@@ -5,6 +5,7 @@ import veg from "../assets/images/veg.png"
 
 function Dishes() {
   return (
+    
     <div className="dishes-container">
       <div className="dropdown">
         

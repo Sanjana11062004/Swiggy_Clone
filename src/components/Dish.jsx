@@ -1,10 +1,10 @@
 import React from "react";
 import Dishes from "./Dishes";
-import Header from "./header";
 import "../styles/style.css";
+import Header from "./Header";
 
 import dropdownblack from "../assets/images/dropdownblack.png"
-import Hr from "./Hr";
+
 function Dish() {
   return (
     <div>
@@ -17,7 +17,7 @@ function Dish() {
           <img src={dropdownblack} alt="dropdown" width={18} height={18}></img>
         </div>
         <div className="dish-main-item" >
-          <Dishes onClick={window.open(`src\Screens\Restaurant.js`)}></Dishes>
+          <Dishes></Dishes>
           <Dishes></Dishes>
         </div>
         

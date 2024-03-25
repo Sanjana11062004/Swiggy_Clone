@@ -1,23 +1,20 @@
-import "./styles/style.css";
-import Header from "./components/header";
-import Card from "./components/Card";
-import Card2 from "./components/Card2";
-import Items from "./components/Items";
-import Hr from "./components/Hr";
-import Footer from "./components/Footer";
-import ContentBig from "./components/ContentBig";
-import Content from "./components/Content";
-import Dish from "./components/Dish";
-import dosa from "../src/assets/images/dosa.png";
-import Offers from "./components/Offers";
-import React, { useState } from "react";
-import offer1 from "./assets/images/offer1.png";
-import offer2 from "./assets/images/offer2.png";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
+import React, { useState } from "react"; 
+import "../styles/style.css";
+import Header from "../components/Header";
+import Card from "../components/Card";
+import Card2 from "../components/Card2";
+import Items from "../components/Items";
+import Hr from "../components/Hr";
+import Footer from "../components/Footer";
+import ContentBig from "../components/ContentBig";
+import Content from "../components/Content";
+import Dish from "../components/Dish";
+import dosa from "../assets/images/dosa.png";
+import Offers from "../components/Offers";
+import offer1 from "../assets/images/offer1.png";
+import offer2 from "../assets/images/offer2.png";
 
-
-function Home({navigation}) {
+function Home() {
   const [offers, setOffers] = useState([offer1,offer2]);
   return (
     <div>
@@ -238,4 +235,4 @@ function Home({navigation}) {
   );
 }
 
-export default App;
+export default Home;

@@ -3,7 +3,7 @@ import arrow from "../assets/images/arrow.png"
 import rarrow from "../assets/images/rarrow.png"
 import biriyani from "../assets/images/biriyani.png"
 import Parotta from "../assets/images/Parotta.png"
-import momos from "../assets/images/momos.png"
+import momos from "../assets/images/Momos.png"
 
 function Card() {
   return (

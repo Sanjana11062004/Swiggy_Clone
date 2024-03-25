@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Example Image 1",
+      "price":"115",
+      "description" : "Serves 1 | A savory dish made of cooked rice and green gram blended with clarified butter,mildly tempered with spices, garnished with cashews and servedhot",
+      "imageUrl": "https://example.com/image1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Example Image 2",
+      "imageUrl": "https://example.com/image2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Example Image 3",
+      "imageUrl": "https://example.com/image3.jpg"
+    }
+  ]
+  
