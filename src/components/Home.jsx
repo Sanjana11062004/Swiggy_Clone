@@ -20,9 +20,14 @@ function Home() {
   const nextPage = () => {
     <Link to="/dish">next</Link>;
   };
+
+  const [cartCount, setCartCount] = useState(0);
+  const addToCart = () => {
+    setCartCount((prevCount) => prevCount + 1);
+  };
   return (
     <div>
-      <Header></Header>
+      <Header cartCount={cartCount}></Header>
       <div className="main">
         <p className="heading margin-next-head">Best offers for you</p>
         <div className=" app-div offers-app">
@@ -35,16 +40,18 @@ function Home() {
         <Card2></Card2>
 
         <div className="app-div content-gap">
-          <Link to="/dish"><Items
-            onClick={nextPage}
-            image={dosa}
-            imgoffer="ITEM AT 129"
-            resname="Burger King"
-            rating="4.3"
-            delivery="60-65 mins"
-            variety="Burgers American"
-            area="Saravapatti"
-          ></Items></Link>
+          <Link to="/dish">
+            <Items
+              onClick={nextPage}
+              image={dosa}
+              imgoffer="ITEM AT 129"
+              resname="Burger King"
+              rating="4.3"
+              delivery="60-65 mins"
+              variety="Burgers American"
+              area="Saravapatti"
+            ></Items>
+          </Link>
           <Items
             image={dosa}
             imgoffer="ITEM AT 129"

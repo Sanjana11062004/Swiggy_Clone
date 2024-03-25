@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import dishesdata from "../json/dishesdata.json";
 import veg from "../assets/images/veg.png"
 
+
 function Dishes() {
   const [dis, setDis] = useState([]);
 
   useEffect(() => {
     setDis(dishesdata);
-  }, []); // Empty dependency array means this effect runs only once on component mount
+  }, []);
+
+    
+   // Empty dependency array means this effect runs only once on component mount
 
   return (
     <div>

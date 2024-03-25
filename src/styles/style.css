@@ -878,4 +878,5 @@ flex-direction:column;
 .dish-main-item{
   height: max-content;
   position: relative;
+  margin-top: 2%;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
 import dropdown from "../assets/images/dropdown.png";
 import search from "../assets/images/search.png";
@@ -7,7 +7,7 @@ import  help from "../assets/images/help.png"
 import user from "../assets/images/user.png"
 import cart from "../assets/images/cart.png"
 
-function Header() {
+function Header({cartCount}) {
   return (
     <div>
         <nav className="nav-bar ">
@@ -55,6 +55,7 @@ function Header() {
                         <div className='nav-items-right-container'>
                             <span><img className='image' src={cart}></img></span>
                             <span>Cart</span>
+                            <span>0</span>
                         </div>
                     </a>
                 </li>

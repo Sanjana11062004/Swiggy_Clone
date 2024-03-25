@@ -9,7 +9,7 @@ import dropdownblack from "../assets/images/dropdownblack.png";
 function Dish() {
   return (
     <div>
-      <Header></Header>
+      <Header />
       <div className="dish-main">
         <div className="dish-main-head">
           <span>
