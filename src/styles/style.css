@@ -710,21 +710,7 @@ div.container-1 img {
 
 
 
-/*Dishes
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}*/
+/*Dishes*/
 
 .dropdown {
   width: 100%;
@@ -735,7 +721,27 @@ div.container-1 img {
 .dishes-container{
   width: 100%;
 }
-
+.dishes-btn {
+  position: absolute;
+  top: 78%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #fff;
+  color:#60b246;
+  font-size: 14px;
+  font-weight: 500;
+  width: 60%;
+  height: 30%;
+  border: 1px solid #d4d5d9;
+  box-shadow: #686b78;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.image-food-add{
+  position: relative;
+}
 .dropdown .dropbtn {
   cursor: pointer;
   font-size: 16px;  
@@ -750,7 +756,7 @@ div.container-1 img {
 }
 .dropbtn {
   font-size: 16px;
-  font-weight: 700px;
+  font-weight: 900px;
   background-color: #fff;
   border: none;
 }
@@ -793,7 +799,6 @@ padding-left: 0px;
 .col{
 display:flex;
 flex-direction:column;
-
 }
 .dishes-image{
   border-radius: 5px;
@@ -805,7 +810,42 @@ flex-direction:column;
   font-weight: 600;
   margin-top: 1px;
   margin-bottom: 0px;
+}
+.res-name{
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.rating-main{
+  box-sizing: border-box;
+  width: 75px;
+  height:90px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 12px;
+}
+.ratings p{
+  margin: 0;
+}
+.ratings-hr{
+  margin: 12px;
+}
+.ratings hr{
+  margin: 20%;
+}
+.rating-font{
+  font-size: 12px;
+}
+.ratings{
+  border-radius: 5px;
+  border: 2px solid gray;
 
+}
+.margin-zero{
+  margin: 0;
+  font-size: 12px;
 }
 .dishes-items-price{
   font-size: 13px;
@@ -819,36 +859,23 @@ flex-direction:column;
   color: rgba(40,44,63,.45);
 }
 
+
 /*Dish*/
 .dish-main{
   padding: 0% 24%;
-  margin-top: 50px;
+  margin-top: 7%;
   margin-bottom: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   
 }
+.dish-main-head{
+  font-size: 10px;
+  display: flex;
+  gap: 2px;
+}
 .dish-main-item{
   height: max-content;
   position: relative;
-}
-.dishes-btn {
-  position: absolute;
-  top: 73%;
-  left: 91.2%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #fff;
-  color:#60b246;
-  font-size: 14px;
-  font-weight: 500;
-  width: 13%;
-  height: 28%;
-  
-  border: 1px solid #d4d5d9;
-  box-shadow: #686b78;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
 }

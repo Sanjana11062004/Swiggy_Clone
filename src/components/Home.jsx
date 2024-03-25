@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import "../styles/style.css";
 import Header from "../components/Header";
 import Card from "../components/Card";
@@ -8,14 +8,18 @@ import Hr from "../components/Hr";
 import Footer from "../components/Footer";
 import ContentBig from "../components/ContentBig";
 import Content from "../components/Content";
-import Dish from "../components/Dish";
 import dosa from "../assets/images/dosa.png";
 import Offers from "../components/Offers";
 import offer1 from "../assets/images/offer1.png";
 import offer2 from "../assets/images/offer2.png";
+import { Link } from "react-router-dom";
+import Dish from "./Dish";
 
 function Home() {
-  const [offers, setOffers] = useState([offer1,offer2]);
+  const [offers, setOffers] = useState([offer1, offer2]);
+  const nextPage = () => {
+    <Link to="/dish">next</Link>;
+  };
   return (
     <div>
       <Header></Header>
@@ -31,7 +35,8 @@ function Home() {
         <Card2></Card2>
 
         <div className="app-div content-gap">
-          <Items
+          <Link to="/dish"><Items
+            onClick={nextPage}
             image={dosa}
             imgoffer="ITEM AT 129"
             resname="Burger King"
@@ -39,7 +44,7 @@ function Home() {
             delivery="60-65 mins"
             variety="Burgers American"
             area="Saravapatti"
-          ></Items>
+          ></Items></Link>
           <Items
             image={dosa}
             imgoffer="ITEM AT 129"
@@ -230,7 +235,6 @@ function Home() {
       </div>
       <div className="gapbtw"></div>
       <Footer></Footer>
-      <Dish></Dish>
     </div>
   );
 }
