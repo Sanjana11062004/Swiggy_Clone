@@ -24,7 +24,7 @@ function Home() {
  
   return (
     <div>
-      <Header cartCount={cartCount}></Header>
+      <Header></Header>
       <div className="main">
         <p className="heading margin-next-head">Best offers for you</p>
         <div className=" app-div offers-app">
