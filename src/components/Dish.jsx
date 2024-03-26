@@ -3,13 +3,20 @@ import Dishes from "./Dishes";
 import "../styles/style.css";
 import Header from "./Header";
 import veg from "../assets/images/veg.png";
-
+import Home from "./Home";
 import dropdownblack from "../assets/images/dropdownblack.png";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Dish() {
+  const [cartCount, setCartCount] = useState(0);
+  const addToCart = (id) => {
+    
+    setCartCount(cartCount+1);
+  };
   return (
     <div>
-      <Header />
+      <Header cartCount={cartCount}/>
       <div className="dish-main">
         <div className="dish-main-head">
           <span>
@@ -50,9 +57,14 @@ function Dish() {
         </div>
         
         <div className="dish-main-item">
-          <Dishes></Dishes>
+          <Dishes addToCart={addToCart}></Dishes>
+        </div>
+        <div className="view-cart">
+            <p>{cartCount} items added</p>
+            <Link to='/checkout' className="view-cart-button"><p>VIEW CART</p></Link>
         </div>
       </div>
+      
     </div>
   );
 }

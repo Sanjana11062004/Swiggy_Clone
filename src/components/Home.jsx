@@ -21,10 +21,7 @@ function Home() {
     <Link to="/dish">next</Link>;
   };
 
-  const [cartCount, setCartCount] = useState(0);
-  const addToCart = () => {
-    setCartCount((prevCount) => prevCount + 1);
-  };
+ 
   return (
     <div>
       <Header cartCount={cartCount}></Header>

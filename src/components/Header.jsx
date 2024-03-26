@@ -6,6 +6,8 @@ import discount from "../assets/images/discount.png";
 import  help from "../assets/images/help.png"
 import user from "../assets/images/user.png"
 import cart from "../assets/images/cart.png"
+import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 function Header({cartCount}) {
   return (
@@ -51,13 +53,13 @@ function Header({cartCount}) {
                     </a>
                 </li>
                 <li className='nav-items-2'>
-                    <a className='nav-items-left-a a-color' href=''>
+                    <Link to='/checkout' className='nav-items-left-a a-color'>
                         <div className='nav-items-right-container'>
                             <span><img className='image' src={cart}></img></span>
+                            <span className="cart-cnt">{cartCount}</span>
                             <span>Cart</span>
-                            <span>0</span>
                         </div>
-                    </a>
+                    </Link>
                 </li>
             </ul>  
         </nav>
