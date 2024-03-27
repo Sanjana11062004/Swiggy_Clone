@@ -5,18 +5,27 @@ import Header from "./Header";
 import veg from "../assets/images/veg.png";
 import Home from "./Home";
 import dropdownblack from "../assets/images/dropdownblack.png";
-import { useState } from "react";
+import { useState,  useEffect } from "react";
 import { Link } from "react-router-dom";
+import dishesdata from "../json/dishesdata.json";
 
 function Dish() {
+  const [dis, setDis] = useState([]);
+
+  useEffect(() => {
+    setDis(dishesdata);
+  }, []);
+
   const [cartCount, setCartCount] = useState(0);
-  const addToCart = (id) => {
-    
-    setCartCount(cartCount+1);
+  const addToCart = (name,price) => {
+    setCartCount(cartCount + 1);
+    Cart(name,price);
+    console.log({name});
+    console.log({price});
   };
   return (
     <div>
-      <Header cartCount={cartCount}/>
+      <Header cartCount={cartCount} />
       <div className="dish-main">
         <div className="dish-main-head">
           <span>
@@ -50,21 +59,22 @@ function Dish() {
         </div>
         <hr></hr>
         <div className="flexx">
-          <button className="dropbtn" onclick="myFunction()">
+          <button className="dropbtn">
             Recommendations
           </button>
           <img src={dropdownblack} alt="dropdown" width={18} height={18}></img>
         </div>
-        
+
         <div className="dish-main-item">
           <Dishes addToCart={addToCart}></Dishes>
         </div>
         <div className="view-cart">
-            <p>{cartCount} items added</p>
-            <Link to='/checkout' className="view-cart-button"><p>VIEW CART</p></Link>
+          <p>{cartCount} items added</p>
+          <Link to="/checkout" className="view-cart-button">
+            <p>VIEW CART</p>
+          </Link>
         </div>
       </div>
-      
     </div>
   );
 }

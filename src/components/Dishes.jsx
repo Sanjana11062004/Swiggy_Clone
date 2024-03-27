@@ -38,7 +38,7 @@ function Dishes({ addToCart }) {
                 width={120}
                 height={100}
               ></img>
-              <button className="dishes-btn" onClick={()=> addToCart(dis.id)}>
+              <button className="dishes-btn" onClick={()=> addToCart(dis.name,dis.price)}>
                 ADD
               </button>
             </div>
