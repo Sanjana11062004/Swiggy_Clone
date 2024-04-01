@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dosa from "../assets/images/dosa.png";
 import { Link } from "react-router-dom";
 import discount from "../assets/images/discount.png";
-function Cart() {
+
+function Cart({ name, price }) {
+  const [dishes, setDishes] = useState([]);
+
+  useEffect(() => {
+    const storedDishes = JSON.parse(localStorage.getItem("dishes_ordered"));
+    if (storedDishes) {
+      setDishes(storedDishes);
+    }
+  }, []);
+
+  const [itemCount, setItemCount]=useState(1);
+  const addItem=(id)=>{
+    setItemCount(itemCount+1);
+  }
+  const deleteItem =(id)=>{
+    setItemCount(itemCount-1);
+  }
+  console.log(name);
+  console.log(price);
   return (
     <div className="cart-main">
       <div className="cart-main-res">
@@ -27,28 +46,21 @@ function Cart() {
         </div>
       </div>
       <div className="scroll">
-        <div className="cart-items ">
-          <p>yllkjhgfxzxcvbnmnbvbnm</p>
-          <div className="btn-add-rem">
-            <button>-</button>
-            <p>0</p>
-            <button>+</button>
+        
+        {dishes.map((di, index) => (
+          <div className="cart-items" key={index}>
+            <p>{di.name}</p>
+            <div className="btn-add-rem">
+              <button onClick={deleteItem(index)}>-</button>
+              <p>{itemCount}</p>
+              <button onClick={addItem(index)}>+</button>
+            </div>
+            <div>
+              <p>{di.price}</p>
+            </div>
           </div>
-          <Link>
-            <i>dustbin</i>
-          </Link>
-        </div>
-        <div className="cart-items">
-          <p>yllkjhgfxzxcvbnmnbvbnm</p>
-          <div className="btn-add-rem">
-            <button>-</button>
-            <p>0</p>
-            <button>+</button>
-          </div>
-          <Link>
-            <i>dustbin</i>
-          </Link>
-        </div>
+        ))}
+
         <hr></hr>
         <div className=" div2">
           <textarea placeholder="Any suggestions? We will pass it on..."></textarea>
@@ -95,12 +107,10 @@ function Cart() {
               <p>123</p>
             </div>
           </div>
-          
         </div>
       </div>
       <hr></hr>
       <div className="cart-bill tpay">
-        
         <p>TO PAY</p>
         <p>789</p>
       </div>

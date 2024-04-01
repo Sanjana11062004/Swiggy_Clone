@@ -7,9 +7,9 @@ function Items(props) {
   return (
     <div className="body-image-container">
       <a href="" className="body-image-container-anchor">
-        <div class="body-image-container-1">
+        <div className="body-image-container-1">
           <img className="body-image-container-pic" src={props.image}></img>
-          <div class="centered">{props.imgoffer}</div>
+          <div className="centered">{props.imgoffer}</div>
         </div>
         <div className="body-image-container-2">
           <span className="body-image-container-text">{props.resname}</span>

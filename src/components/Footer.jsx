@@ -19,8 +19,8 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <div class="grid-container">
-          <div class="grid-item">
+        <div className="grid-container">
+          <div className="grid-item">
             <div className="grid-part1">
               <div>
                 <img src={logo} width={40} height={40}></img>
@@ -32,9 +32,9 @@ function Footer() {
             <div>
               <p
                 style={{
-                  "font-size": "14px",
+                  fontSize: "14px",
                   color: "#fff",
-                  "margin-left": "10px",
+                  marginLeft: "10px",
                   width: "50px",
                 }}
               >
@@ -43,7 +43,7 @@ function Footer() {
               </p>
             </div>
           </div>
-          <div class="grid-item disply-items">
+          <div className="grid-item disply-items">
             <p className="foot-grid-head">Company</p>
             <p className="font-grid-content">About</p>
             <p className="font-grid-content">Careers</p>
@@ -66,7 +66,7 @@ function Footer() {
               <p className="font-grid-content">Privacy Policy</p>
             </div>
           </div>
-          <div class="grid-item">
+          <div className="grid-item">
             <p className="foot-grid-head">We deliver to:</p>
             <p className="font-grid-content">Banglore</p>
             <p className="font-grid-content">Gurgaon</p>

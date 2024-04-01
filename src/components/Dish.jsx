@@ -5,9 +5,10 @@ import Header from "./Header";
 import veg from "../assets/images/veg.png";
 import Home from "./Home";
 import dropdownblack from "../assets/images/dropdownblack.png";
-import { useState,  useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import dishesdata from "../json/dishesdata.json";
+import Cart from "./Cart";
 
 function Dish() {
   const [dis, setDis] = useState([]);
@@ -17,15 +18,28 @@ function Dish() {
   }, []);
 
   const [cartCount, setCartCount] = useState(0);
-  const addToCart = (name,price) => {
+ 
+  const addToCart = (name, price) => {
     setCartCount(cartCount + 1);
-    Cart(name,price);
-    console.log({name});
-    console.log({price});
+    
+    
+    const existingDishes = JSON.parse(localStorage.getItem('dishes_ordered')) || [];
+    const dish = { name: name, price: price};
+    
+    // Add the new dish to existing dishes
+    const updatedDishes = [...existingDishes, dish];
+
+    // Update local storage with the updated list of dishes
+    localStorage.setItem('dishes_ordered', JSON.stringify(updatedDishes));
+
+   // localStorage.setItem(cartCount);
+    
+    console.log({ name });
+    console.log({ price });
   };
   return (
     <div>
-      <Header cartCount={cartCount} />
+      <Header cartCount={localStorage.getItem(cartCount)} />
       <div className="dish-main">
         <div className="dish-main-head">
           <span>
@@ -59,9 +73,7 @@ function Dish() {
         </div>
         <hr></hr>
         <div className="flexx">
-          <button className="dropbtn">
-            Recommendations
-          </button>
+          <button className="dropbtn">Recommendations</button>
           <img src={dropdownblack} alt="dropdown" width={18} height={18}></img>
         </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function Offers(props){
     return(
-        <div style={{"margin-top":"2%"}}>
+        <div style={{marginTop:"2%"}}>
             <div>
             
             <div className="offers-home">

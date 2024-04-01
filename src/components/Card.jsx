@@ -11,8 +11,8 @@ function Card() {
       <div className="section1">
         <p className="heading">Sanjana. what's on your mind?</p>
         <div className="arrow">
-            <button type="button" class="btn btn-primary" style={{"border-radius":"200px","background-color":"orange","border":"none"}}><img src={arrow} alt="arrow" width={12}></img></button>
-            <button type="button" class="btn btn-primary" style={{"border-radius":"200px","background-color":"orange","border":"none"}}><img src={rarrow} alt="arrow" width={12}></img></button>
+            <button type="button" className="btn btn-primary" style={{borderRadius:"200px",backgroundColor:"orange","border":"none"}}><img src={arrow} alt="arrow" width={12}></img></button>
+            <button type="button" className="btn btn-primary" style={{borderRadius:"200px",backgroundColor:"orange","border":"none"}}><img src={rarrow} alt="arrow" width={12}></img></button>
             
         </div> 
       </div>
