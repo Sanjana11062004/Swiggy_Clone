@@ -12,7 +12,7 @@ function Cart({ name, price }) {
     if (storedDishes) {
       const initializedDishes = storedDishes.map(dish => ({
         ...dish,
-        quantity: dish.quantity || 0
+        quantity: dish.quantity || 1
       }));
       setDishes(initializedDishes);
     }
@@ -33,13 +33,14 @@ function Cart({ name, price }) {
     const updatedDishes = [...dishes];
     const updatedDish = { ...updatedDishes[id], quantity: updatedDishes[id].quantity - 1 };
     updatedDishes[id] = updatedDish;
+    if (updatedDishes[id].quantity === 0) {
+      updatedDishes.splice(id, 1);
+      setDishes(updatedDishes);
+    }
     setDishes(updatedDishes);
     localStorage.setItem("dishes_ordered", JSON.stringify(updatedDishes.filter(dish => dish.quantity > 0)));
 
-    if (updatedDishes[id].quantity === 0) {
-          updatedDishes.splice(id, 1);
-          setDishes(updatedDishes);
-        }
+    
   };
   
   

@@ -1,12 +1,10 @@
 import React from "react";
-
+import home from "../assets/images/home.png"
 function Address(props){
     return(
         <div className="addr-main">
             <div>
-                <i>
-                    Home
-                </i>
+                <img src={home} width={20} height={20}></img>
             </div>
             <div>
                 <h5>{props.headName}</h5>

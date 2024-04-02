@@ -18,28 +18,27 @@ function Dish() {
   }, []);
 
   const [cartCount, setCartCount] = useState(0);
- 
   const addToCart = (name, price) => {
     setCartCount(cartCount + 1);
-    
-    
-    const existingDishes = JSON.parse(localStorage.getItem('dishes_ordered')) || [];
-    const dish = { name: name, price: price};
-    
+
+    const existingDishes =
+      JSON.parse(localStorage.getItem("dishes_ordered")) || [];
+    const dish = { name: name, price: price };
+
     // Add the new dish to existing dishes
     const updatedDishes = [...existingDishes, dish];
 
     // Update local storage with the updated list of dishes
-    localStorage.setItem('dishes_ordered', JSON.stringify(updatedDishes));
+    localStorage.setItem("dishes_ordered", JSON.stringify(updatedDishes));
 
-   // localStorage.setItem(cartCount);
-    
+    // localStorage.setItem(cartCount);
+
     console.log({ name });
     console.log({ price });
   };
   return (
     <div>
-      <Header cartCount={localStorage.getItem(cartCount)} />
+      <Header cartCount={cartCount} />
       <div className="dish-main">
         <div className="dish-main-head">
           <span>
