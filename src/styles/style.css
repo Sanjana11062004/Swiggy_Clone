@@ -953,8 +953,8 @@ flex-direction:column;
 }
 .cart-items{
   display: flex;
-  gap: 10px;
-  padding:0 8%;
+  gap: 50px;
+  padding:0 10%;
 }
 .div2 textarea{
   width: 100%;
@@ -1120,4 +1120,8 @@ flex-direction:column;
 .addr-main h6{
   font-size: 12px;
 }
-
+/*Checkout*-------------------------------------------------------------------------------------------------------------------------------*/
+.button-checkout-add button{
+  border:2px solid #60b246;
+  background-color: white;
+}

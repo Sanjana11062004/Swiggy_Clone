@@ -1,6 +1,6 @@
 import React from "react";
 
-function Address(){
+function Address(props){
     return(
         <div className="addr-main">
             <div>
@@ -9,10 +9,10 @@ function Address(){
                 </i>
             </div>
             <div>
-                <h5>Home</h5>
-                <p>1E, Ganganagar, Muthu Nagar, Narasimhanaickenpalayam, Tamil Nadu 641031, India</p>
-                <h6>29 MINS</h6>
-                <button>DELIVER HERE</button>
+                <h5>{props.headName}</h5>
+                <p>{props.address}</p>
+                <h6>{props.time}</h6>
+                <button>{props.button}</button>
             </div>
         </div>
     );

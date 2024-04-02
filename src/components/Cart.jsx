@@ -7,21 +7,62 @@ function Cart({ name, price }) {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
+    // Load cart data from localStorage on component mount
     const storedDishes = JSON.parse(localStorage.getItem("dishes_ordered"));
     if (storedDishes) {
-      setDishes(storedDishes);
+      const initializedDishes = storedDishes.map(dish => ({
+        ...dish,
+        quantity: dish.quantity || 0
+      }));
+      setDishes(initializedDishes);
     }
+    
   }, []);
 
-  const [itemCount, setItemCount]=useState(1);
-  const addItem=(id)=>{
-    setItemCount(itemCount+1);
-  }
-  const deleteItem =(id)=>{
-    setItemCount(itemCount-1);
-  }
-  console.log(name);
-  console.log(price);
+  const addItem = (id) => {
+    const updatedDishes = [...dishes];
+    if (updatedDishes[id].quantity >= 0 || updatedDishes[id].quantity === undefined) {
+      updatedDishes[id].quantity = (updatedDishes[id].quantity || 0) + 1; // Initialize to 1 if undefined
+      setDishes(updatedDishes);
+      // Save updated cart data to localStorage
+      localStorage.setItem("dishes_ordered", JSON.stringify(updatedDishes));
+    }
+  };
+  
+  const deleteItem = (id) => {
+    const updatedDishes = [...dishes];
+    const updatedDish = { ...updatedDishes[id], quantity: updatedDishes[id].quantity - 1 };
+    updatedDishes[id] = updatedDish;
+    setDishes(updatedDishes);
+    localStorage.setItem("dishes_ordered", JSON.stringify(updatedDishes.filter(dish => dish.quantity > 0)));
+
+    if (updatedDishes[id].quantity === 0) {
+          updatedDishes.splice(id, 1);
+          setDishes(updatedDishes);
+        }
+  };
+  
+  
+  // const deleteItem = (id) => {
+  //   const updatedDishes = [...dishes];
+  //   if (updatedDishes[id].quantity > 0) {
+  //     updatedDishes[id].quantity -= 1; // Decrement quantity of the item at index
+  //     setDishes(updatedDishes);
+  //     // Save updated cart data to localStorage
+  //     localStorage.setItem("dishes_ordered", JSON.stringify(updatedDishes));
+
+  //   }
+  //   if (updatedDishes[id].quantity === 0) {
+  //     updatedDishes.splice(id, 1);
+  //     setDishes(updatedDishes);
+  //   }
+
+  // };
+
+
+  // Calculate total price of items in the cart
+  const totalPrice = dishes.reduce((acc, dish) => acc + (dish.quantity * dish.price), 0);
+
   return (
     <div className="cart-main">
       <div className="cart-main-res">
@@ -51,9 +92,9 @@ function Cart({ name, price }) {
           <div className="cart-items" key={index}>
             <p>{di.name}</p>
             <div className="btn-add-rem">
-              <button onClick={deleteItem(index)}>-</button>
-              <p>{itemCount}</p>
-              <button onClick={addItem(index)}>+</button>
+              <button onClick={()=>deleteItem(index)}>-</button>
+              <p>{di.quantity}</p>
+              <button onClick={()=>addItem(index)}>+</button>
             </div>
             <div>
               <p>{di.price}</p>
@@ -86,25 +127,25 @@ function Cart({ name, price }) {
           <p>Bill Details</p>
           <div>
             <div className="cart-bill">
-              <p>asdfg</p>
-              <p>123</p>
+              <p>Item total</p>
+              <p>Rs.123</p>
             </div>
             <div className="cart-bill">
-              <p>asdfg</p>
-              <p>123</p>
+              <p>Delivery partner fee</p>
+              <p>Rs.23</p>
             </div>
             <hr></hr>
             <div className="cart-bill">
-              <p>asdfg</p>
-              <p>123</p>
+              <p>Delivery Tip</p>
+              <p>Rs.30</p>
             </div>
             <div className="cart-bill">
-              <p>asdfg</p>
-              <p>123</p>
+              <p>Platform fee</p>
+              <p>Rs.4</p>
             </div>
             <div className="cart-bill">
-              <p>asdfg</p>
-              <p>123</p>
+              <p>GST and Restaurant Charges</p>
+              <p>23.72</p>
             </div>
           </div>
         </div>
@@ -112,10 +153,12 @@ function Cart({ name, price }) {
       <hr></hr>
       <div className="cart-bill tpay">
         <p>TO PAY</p>
-        <p>789</p>
+        <p>{totalPrice+4+30+23+123+23.72}</p>
       </div>
     </div>
   );
 }
+
+
 
 export default Cart;

@@ -14,8 +14,16 @@ function Checkout() {
               You have a saved address in this location
             </p>
             <div className="checkout-address">
-              <Address></Address>
-              <Address></Address>
+              <Address
+              headName="Home"
+              address="1E, Ganganagar, Muthu Nagar, Narasimhanaickenpalayam, Tamil Nadu 641031, India"
+              time="29 mins"
+              button="DELIVER HERE"
+              ></Address>
+              <Address className ="button-checkout-add"
+              headName="Add New Address"
+              address="1E, Ganganagar, Muthu Nagar, Narasimhanaickenpalayam, Tamil Nadu 641031, India"
+              button="ADD NEW"></Address>
             </div>
           </div>
           <div className="checkout-payment">
