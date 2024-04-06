@@ -104,6 +104,7 @@ button {
   }
 }
 .grey-buttons button {
+  
   border-radius: 18px;
   height: 38px;
   width: max-content;
@@ -1124,4 +1125,27 @@ flex-direction:column;
 .button-checkout-add button{
   border:2px solid #60b246;
   background-color: white;
+}
+.nav-bar-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar{
+    display: none;
+  }
+  .nav-bar-mobile{
+    display: flex;
+    width: 100%;
+    gap: 26%;
+  }
+  .grey-buttons{
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  .grey-buttons button{
+    font-size: 10px;
+  
+  }
+
 }
