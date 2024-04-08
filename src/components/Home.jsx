@@ -9,6 +9,21 @@ import Footer from "../components/Footer";
 import ContentBig from "../components/ContentBig";
 import Content from "../components/Content";
 import dosa from "../assets/images/dosa.png";
+import icecream from "../assets/images/icecream.png";
+import snad from "../assets/images/snad.jpeg";
+import mm from "../assets/images/mm.jpeg";
+import palam from "../assets/images/palam.jpeg";
+import pixxa from "../assets/images/pixxa.jpeg"
+import sweet from "../assets/images/sweet.jpeg";
+import legpiece from "../assets/images/legpiece.jpeg";
+import brhbiriyani from "../assets/images/brhbiriyani.jpeg";
+import samosabw from "../assets/images/samosabw.jpeg";
+import pizzaland from "../assets/images/pizzaland.jpeg";
+import paneer from "../assets/images/paneer.jpeg";
+import idli from "../assets/images/idli.png";
+import juice from "../assets/images/juice.jpeg";
+import dosa2 from "../assets/images/dosa2.jpeg";
+import ibaco from "../assets/images/ibaco.jpeg";
 import Offers from "../components/Offers";
 import offer1 from "../assets/images/offer1.png";
 import offer2 from "../assets/images/offer2.png";
@@ -21,8 +36,6 @@ function Home() {
     <Link to="/dish">next</Link>;
   };
 
- 
-  
   return (
     <div>
       <Header></Header>
@@ -51,7 +64,7 @@ function Home() {
             ></Items>
           </Link>
           <Items
-            image={dosa}
+            image={icecream}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -61,7 +74,7 @@ function Home() {
           ></Items>
 
           <Items
-            image={dosa}
+            image={snad}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -70,7 +83,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={idli}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -79,7 +92,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={dosa2}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -88,7 +101,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={ibaco}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -97,7 +110,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={juice}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -106,7 +119,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={mm}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -115,7 +128,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={palam}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -124,7 +137,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={sweet}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -133,7 +146,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={pixxa}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -142,7 +155,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={paneer}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -151,7 +164,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={legpiece}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -160,7 +173,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={brhbiriyani}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -169,7 +182,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={pizzaland}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -178,7 +191,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={dosa}
+            image={samosabw}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
@@ -186,6 +199,8 @@ function Home() {
             variety="Burgers American"
             area="Saravapatti"
           ></Items>
+          
+          
         </div>
       </div>
       <div className="main2">
