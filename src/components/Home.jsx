@@ -13,7 +13,7 @@ import icecream from "../assets/images/icecream.png";
 import snad from "../assets/images/snad.jpeg";
 import mm from "../assets/images/mm.jpeg";
 import palam from "../assets/images/palam.jpeg";
-import pixxa from "../assets/images/pixxa.jpeg"
+import pixxa from "../assets/images/pixxa.jpeg";
 import sweet from "../assets/images/sweet.jpeg";
 import legpiece from "../assets/images/legpiece.jpeg";
 import brhbiriyani from "../assets/images/brhbiriyani.jpeg";
@@ -28,13 +28,12 @@ import Offers from "../components/Offers";
 import offer1 from "../assets/images/offer1.png";
 import offer2 from "../assets/images/offer2.png";
 import { Link } from "react-router-dom";
-import {useHistory} from "react-router-dom";
+import Dish from "./Dish";
 
 function Home() {
-  const history=useHistory();
   const [offers, setOffers] = useState([offer1, offer2]);
   const nextPage = () => {
-    history.push('/dish');
+    return <Link to="/dish">next</Link>;
   };
 
   return (
@@ -43,8 +42,8 @@ function Home() {
       <div className="main">
         <p className="heading margin-next-head">Best offers for you</p>
         <div className=" app-div offers-app">
-          {offers.map((i) => (
-            <Offers offers={i}></Offers>
+          {offers.map((i,index) => (
+            <Offers key={index} offers={i}></Offers>
           ))}
         </div>
 
@@ -200,8 +199,6 @@ function Home() {
             variety="Burgers American"
             area="Saravapatti"
           ></Items>
-          
-          
         </div>
       </div>
       <div className="main2">
