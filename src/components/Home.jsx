@@ -28,12 +28,13 @@ import Offers from "../components/Offers";
 import offer1 from "../assets/images/offer1.png";
 import offer2 from "../assets/images/offer2.png";
 import { Link } from "react-router-dom";
-import Dish from "./Dish";
+import {useHistory} from "react-router-dom";
 
 function Home() {
+  const history=useHistory();
   const [offers, setOffers] = useState([offer1, offer2]);
   const nextPage = () => {
-    <Link to="/dish">next</Link>;
+    history.push('/dish');
   };
 
   return (
