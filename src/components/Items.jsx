@@ -6,7 +6,7 @@ import star from "../assets/images/star.png";
 function Items(props) {
   return (
     <div className="body-image-container">
-      
+      <div className="body-image-container-anchor">
         <div className="body-image-container-1">
           <img className="body-image-container-pic" src={props.image}></img>
           <div className="centered">{props.imgoffer}</div>
@@ -26,7 +26,7 @@ function Items(props) {
             {props.area}
           </span>
         </div>
-      
+      </div>
     </div>
   );
 }

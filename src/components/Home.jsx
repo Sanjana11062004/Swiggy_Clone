@@ -20,7 +20,7 @@ import brhbiriyani from "../assets/images/brhbiriyani.jpeg";
 import samosabw from "../assets/images/samosabw.jpeg";
 import pizzaland from "../assets/images/pizzaland.jpeg";
 import paneer from "../assets/images/paneer.jpeg";
-import idli from "../assets/images/idli.png";
+import itly from "../assets/images/itly.png";
 import juice from "../assets/images/juice.jpeg";
 import dosa2 from "../assets/images/dosa2.jpeg";
 import ibaco from "../assets/images/ibaco.jpeg";
@@ -83,7 +83,7 @@ function Home() {
             area="Saravapatti"
           ></Items>
           <Items
-            image={idli}
+            image={itly}
             imgoffer="ITEM AT 129"
             resname="Burger King"
             rating="4.3"
