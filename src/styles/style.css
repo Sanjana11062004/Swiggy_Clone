@@ -1130,10 +1130,18 @@ flex-direction:column;
 .nav-bar-mobile{
   display: none;
 }
+.footer-mob{
+  display: none;
+}
+.header-mob{
+  display: none;
+}
 
 @media only screen and (max-width: 600px) {
-  .nav-bar{
-    display: none;
+  .header-mob{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
   }
   .nav-bar-mobile{
     display: flex;
@@ -1148,5 +1156,38 @@ flex-direction:column;
     font-size: 10px;
   
   }
-
+  .main2-content{
+    display: none;
+  }
+  .footer-main{
+    display: none;
+  }
+  .gapbtw{
+    display: none;
+  }
+  .footer-mob{
+    display: block;
+    background-color: rgb(240, 240, 245);
+    padding: 19% 20px;
+    color: #686b78;
+  }
+  .footer-mob h2{
+    font-weight: 800;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    font-size: 70px;
+    
+  }
+  .main{
+    padding: 3%;
+  }
+  .dishes-desc{
+    display: none;
+  }
+  .offers-app{
+    display: none;
+  }
+  .margin-next-head{
+    display: none;
+  }
 }

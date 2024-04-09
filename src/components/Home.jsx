@@ -29,6 +29,8 @@ import offer1 from "../assets/images/offer1.png";
 import offer2 from "../assets/images/offer2.png";
 import { Link } from "react-router-dom";
 import Dish from "./Dish";
+import FooterMob from "./FooterMob";
+import HeaderMob from "./HeaderMob";
 
 function Home() {
   const [offers, setOffers] = useState([offer1, offer2]);
@@ -74,6 +76,7 @@ function Home() {
   return (
     <div>
       <Header></Header>
+      <HeaderMob></HeaderMob>
       <div className="main">
         <p className="heading margin-next-head">Best offers for you</p>
         <div className=" app-div offers-app">
@@ -268,6 +271,8 @@ function Home() {
       </div>
       <div className="gapbtw"></div>
       <Footer></Footer>
+      <FooterMob></FooterMob>
+      
     </div>
   );
 }
