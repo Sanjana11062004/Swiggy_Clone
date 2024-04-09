@@ -1,9 +1,9 @@
 import React from "react";
 
-function ContentBig(){
+function ContentBig(props){
     return(
-        <div className="content-main">
-            <a className='resturant-container-main-items-ancchor2 resturant-container-main-items-ancchor' href=''>Best Restaurants in Banglore</a>
+        <div className="content-main" style={{width:"48%"}}>
+            <a className='resturant-container-main-items-ancchor' href=''>{props.name}</a>
         </div>
     );
 }

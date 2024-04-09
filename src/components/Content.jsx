@@ -1,9 +1,9 @@
 import React from "react";
-function Content(){
+function Content(props){
     return(
         <div className="content-main">
             
-                <a className='resturant-container-main-items-ancchor' style={{width:"800px"}} href=''>Best Restaurants in Banglore</a>
+                <a className='resturant-container-main-items-ancchor' href=''>{props.main} {props.title}</a>
                 
             
         </div>

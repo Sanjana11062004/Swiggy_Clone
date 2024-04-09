@@ -479,7 +479,7 @@ div.container-1 img {
   font-size: 24px;
 } 
 .margin-next-head-main2{
-  margin-top: 5%;
+  margin-top: 6%;
   margin-bottom: 1.6%;
 }
 
@@ -500,22 +500,23 @@ div.container-1 img {
   padding-top: 10px;
 }
 .resturant-container-main-items-ancchor{
+  text-decoration: none;
   color: black;
+  text-align: center;
+}
+
+.content-main{
+  width: 290px;
+  height: 60px;
   text-decoration: none;  
-  justify-content: center;
+  text-align: center;
   box-sizing: border-box;
   border-radius: 14px;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(226, 226, 231);
-  padding: 16px 46px;
+  padding-top: 14px;
   box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
   font-size: 16px;
-}
-.resturant-container-main-items-ancchor2{
-  padding: 16px 210px;
-}
-.content-main{
-  margin-top: 1%;
 }
 .cont-flex{
   max-width: 100%;

@@ -35,14 +35,49 @@ function Home() {
   const nextPage = () => {
     return <Link to="/dish">next</Link>;
   };
-
+  const [cuisine, setCuisine] = useState([
+    "Italian",
+    "Chinese",
+    "Mexican",
+    "Indian",
+    "North Indian",
+    "South Indian",
+    "Japanese",
+    "Thai",
+    "Mediterranean",
+    "French",
+    "Greek",
+    "Vietnamese",
+    "Spanish",
+    "Korean",
+    "American",
+    "Brazilian",
+    "Lebanese",
+    "Turkish",
+    "Caribbean",
+    "Moroccan",
+    "Russian",
+    "German",
+  ]);
+  const [cities, setCities] = useState([
+    "Mumbai",
+    "Delhi",
+    "Bangalore",
+    "Chennai",
+    "Kolkata",
+    "Hyderabad",
+    "Pune",
+    "Ahmedabad",
+    "Jaipur",
+    "Surat",
+  ]);
   return (
     <div>
       <Header></Header>
       <div className="main">
         <p className="heading margin-next-head">Best offers for you</p>
         <div className=" app-div offers-app">
-          {offers.map((i,index) => (
+          {offers.map((i, index) => (
             <Offers key={index} offers={i}></Offers>
           ))}
         </div>
@@ -209,46 +244,26 @@ function Home() {
           Best Places to Eat Across Cities
         </p>
         <div className="cont-flex">
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
+          {cities.map((i, index) => (
+            <Content key={index} main={"Best Restaurant in"} title={i}></Content>
+          ))}
         </div>
       </div>
       <div className="main2-content">
         <p className="heading-main2 margin-next-head-main2">
-          Best Places to Eat Across Cities
+          Best Cuisines Near Me
         </p>
-        <div className="cont-flex">
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-          <Content></Content>
-        </div>
+        <div className="cont-flex">{cuisine.map((i,index)=>(
+          <Content key={index} main={i} title={"Restaurant Near Me"}></Content>
+        ))}</div>
       </div>
       <div className="main2-content">
         <p className="heading-main2 margin-next-head-main2">
-          Best Places to Eat Across Cities
+          Explore Every Restaurants Near Me
         </p>
         <div className="cont-flex">
-          <ContentBig></ContentBig>
-          <ContentBig></ContentBig>
+          <ContentBig name={"Explore Restaurants Near Me"}></ContentBig>
+          <ContentBig name={"Explore Top Rated Restaurants Near Me"}></ContentBig>
         </div>
       </div>
       <div className="gapbtw"></div>
