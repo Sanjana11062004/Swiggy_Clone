@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import "../styles/style.css";
 import Header from "../components/Header";
 import Card from "../components/Card";
 import Card2 from "../components/Card2";
 import Items from "../components/Items";
 import Hr from "../components/Hr";
-import Footer from "../components/Footer";
-import ContentBig from "../components/ContentBig";
-import Content from "../components/Content";
 import dosa from "../assets/images/dosa.png";
 import icecream from "../assets/images/icecream.png";
 import snad from "../assets/images/snad.jpeg";
@@ -28,9 +25,11 @@ import Offers from "../components/Offers";
 import offer1 from "../assets/images/offer1.png";
 import offer2 from "../assets/images/offer2.png";
 import { Link } from "react-router-dom";
-import Dish from "./Dish";
-import FooterMob from "./FooterMob";
-import HeaderMob from "./HeaderMob";
+
+// Lazy-load the components
+const Footer = lazy(() => import("../components/Footer"));
+const Content = lazy(() => import("../components/Content"));
+const ContentBig = lazy(() => import("../components/ContentBig"));
 
 function Home() {
   const [offers, setOffers] = useState([offer1, offer2]);
@@ -75,8 +74,7 @@ function Home() {
   ]);
   return (
     <div>
-      <Header></Header>
-      <HeaderMob></HeaderMob>
+      <Header />
       <div className="main">
         <p className="heading margin-next-head">Best offers for you</p>
         <div className=" app-div offers-app">
@@ -85,8 +83,8 @@ function Home() {
           ))}
         </div>
 
-        <Card></Card>
-        <Card2></Card2>
+        <Card />
+        <Card2 />
 
         <div className="app-div content-gap">
           <Link to="/dish">
@@ -240,7 +238,7 @@ function Home() {
         </div>
       </div>
       <div className="main2">
-        <Hr></Hr>
+        <Hr />
       </div>
       <div className="main2-content">
         <p className="heading-main2 margin-next-head-main2">
@@ -248,7 +246,11 @@ function Home() {
         </p>
         <div className="cont-flex">
           {cities.map((i, index) => (
-            <Content key={index} main={"Best Restaurant in"} title={i}></Content>
+            <Content
+              key={index}
+              main={"Best Restaurant in"}
+              title={i}
+            ></Content>
           ))}
         </div>
       </div>
@@ -256,9 +258,15 @@ function Home() {
         <p className="heading-main2 margin-next-head-main2">
           Best Cuisines Near Me
         </p>
-        <div className="cont-flex">{cuisine.map((i,index)=>(
-          <Content key={index} main={i} title={"Restaurant Near Me"}></Content>
-        ))}</div>
+        <div className="cont-flex">
+          {cuisine.map((i, index) => (
+            <Content
+              key={index}
+              main={i}
+              title={"Restaurant Near Me"}
+            ></Content>
+          ))}
+        </div>
       </div>
       <div className="main2-content">
         <p className="heading-main2 margin-next-head-main2">
@@ -266,13 +274,15 @@ function Home() {
         </p>
         <div className="cont-flex">
           <ContentBig name={"Explore Restaurants Near Me"}></ContentBig>
-          <ContentBig name={"Explore Top Rated Restaurants Near Me"}></ContentBig>
+          <ContentBig
+            name={"Explore Top Rated Restaurants Near Me"}
+          ></ContentBig>
         </div>
       </div>
       <div className="gapbtw"></div>
-      <Footer></Footer>
-      <FooterMob></FooterMob>
-      
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
